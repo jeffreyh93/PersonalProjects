@@ -1,4 +1,5 @@
 import java.awt.Component;
+import java.util.Random;
 
 import javax.swing.JOptionPane;
 
@@ -7,6 +8,10 @@ import javafx.event.ActionEvent;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -26,25 +31,45 @@ import javafx.stage.Stage;
 public class MinesweeperScreen extends Application {
     /** difficulty of the game.*/
     private String diff = "easy";
+    private Scene scene;
     private int numRows = 8;
     private int numCols = 8;
     private int numMines = 10;
+    private boolean[][] gameArray;
     /**main game window of the game.
      * @param args
      */
     public void start(Stage primaryStage) throws Exception {
         // TODO Auto-generated method stub
         final double appSize = 1000;
-        final double appHeight = 750;
+        final double appHeight = 950;
         
         showSettings();
         startGame();
         
         Button settings = new Button("Settings");
         settings.setOnAction(this::processButtonPress);
-        
         Group myGroup = new Group(settings);
-        Scene scene = new Scene(myGroup, appSize, appHeight);
+        scene = new Scene(myGroup, appSize, appHeight);
+        
+        StackPane rootPane = new StackPane();
+        
+        for (int i = 0; i < numCols; i++) {
+            FlowPane flow = new FlowPane();
+            for (int j = 0; j < numRows; j++) {
+                Button temp = new Button();
+                temp.setMinWidth(30);
+                temp.setMinHeight(30);
+                temp.setTranslateX(500 - 15 * numCols);
+                temp.setTranslateY(50 + 30 * i);
+                flow.getChildren().addAll(temp);
+            }
+            rootPane.getChildren().addAll(flow);
+        }
+        settings.setTranslateY(400);
+        settings.setMinWidth(150);
+        rootPane.getChildren().addAll(settings);
+        scene.setRoot(rootPane);
         
         primaryStage.setTitle("Minesweeper");
         primaryStage.setScene(scene);
@@ -91,8 +116,33 @@ public class MinesweeperScreen extends Application {
             numCols = 24;
             numMines = 99;
         }
+        // true if the cell contains a mine, otherwise false
+        gameArray = new boolean[numRows][numCols];
         
+        // instantiate gameArray cells to false, then do algorithm to add mines to screen
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
+                gameArray[i][j] = false;
+            }
+        }
+        // randomly add mines to the screen
+        Random rngRow = new Random();
+        Random rngCol = new Random();
+        int randMineRow = 0;
+        int randMineCol = 0;
+        for (int k = 0; k < numMines; k++) {
+            do {
+                randMineRow = rngRow.nextInt(numRows);
+                randMineCol = rngCol.nextInt(numCols);
+            } while (gameArray[randMineRow][randMineCol] != false);
+            gameArray[randMineRow][randMineCol] = true;
+        }
+        
+        // now populate the screen with buttons based on the numRows and numCols values
+        
+        //addButtons(numRows, numCols);
     }
+    
     public void processButtonPress(ActionEvent event) {
         showSettings();
     }
