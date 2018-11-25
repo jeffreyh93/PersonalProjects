@@ -40,7 +40,6 @@ public class MinesweeperScreen extends Application {
     private int numRows = 8;
     private int numCols = 8;
     private int numMines = 10;
-    private int numClicks = 0;
     private Node[][] gridPaneNode;
     private boolean[][] revealArr;
     StackPane rootPane;
@@ -60,8 +59,6 @@ public class MinesweeperScreen extends Application {
         
         //settings = new Button("Settings");
         //settings.setOnAction(this::processButtonPress);
-        Group myGroup = new Group();
-        scene = new Scene(myGroup, appSize, appHeight);
         GridPane root = new GridPane();
         Scene scene = new Scene(root);
         //StackPane rootPane = new StackPane();
@@ -111,6 +108,9 @@ public class MinesweeperScreen extends Application {
                                 int colRev = GridPane.getColumnIndex(element1);
                                 Button bReveal = (Button)element1;
                                 bReveal.setText("" + logicArray[rowRev][colRev]);
+                                if (logicArray[rowRev][colRev] == -1) {
+                                    bReveal.setStyle("-fx-background-color: red");
+                                }
                             }
                         } else {
                             Button b = (Button)element;
