@@ -1,0 +1,52 @@
+body {
+  margin:0;
+  font-family: 'Alegreya';
+}
+
+#topNavBar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#topNavBar h1 a{
+  float: left;
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+#name {
+  float: left;
+}
+#topNavBar p a{
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  margin-left: 14px;
+  margin-right: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#about {
+  height: 50em;
+  background-color: lightblue;
+}
+#personal {
+  height: 50em;
+  background-color: lightyellow;
+}
+#education {
+  height: 50em;
+  background-color: lightgrey;
+}
+#skills {
+  height: 50em;
+  background-color: lightpink;
+}
+#experience {
+  height: 50em;
+  background-color: lightgreen;
+}
