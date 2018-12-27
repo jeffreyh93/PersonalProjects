@@ -1,6 +1,7 @@
 body {
   margin:0;
   font-family: 'Alegreya';
+  width: 100%;
 }
 
 #topNavBar {
@@ -22,24 +23,46 @@ body {
 #topNavBar p a{
   float: right;
   display: block;
-  color: #f2f2f2;
   text-align: center;
   margin-left: 14px;
   margin-right: 14px;
   text-decoration: none;
+  color: white;
   font-size: 20px;
 }
 
 #about {
-  height: 50em;
-  background-color: lightblue;
+  height: 350px;
+}
+#aboutLeft {
+  float: left;
+  padding-top: 50px;
+  width: 50%;
+  background-color: grey;
+}
+#aboutLeft h1 {
+  float: left;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+#aboutLeft img {
+  float: right;
+}
+#aboutRight {
+  float: right;
+  padding-top: 50px;
+  width: 50%;
+}
+#aboutRight p {
+  margin-left: 50px;
+  margin-top: 50px;
 }
 #personal {
   height: 50em;
   background-color: lightyellow;
 }
 #education {
-  height: 50em;
+  height: 200px;
   background-color: lightgrey;
 }
 #skills {
@@ -49,4 +72,41 @@ body {
 #experience {
   height: 50em;
   background-color: lightgreen;
+}
+#eduLeft {
+  float: left;
+  padding-top: 50px;
+  width: 50%
+}
+div section {
+  padding-left: 20px;
+}
+section img {
+  padding-right: 75px;
+}
+.pers {
+  padding-top: 50px;
+}
+#pers1, #pers3 {
+  float: left;
+  width: 50%;
+}
+#pers2, #pers4 {
+  float: right;
+  width: 50%;
+}
+.pers p a {
+  text-decoration: none;
+}
+#persLeft {
+  float: left;
+  width: 50%;
+}
+#persRight {
+  float: right;
+}
+#eduRight {
+  float: right;
+  padding-top: 50px;
+  width: 50%
 }
