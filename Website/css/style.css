@@ -38,7 +38,6 @@ body {
   float: left;
   padding-top: 50px;
   width: 50%;
-  background-color: grey;
 }
 #aboutLeft h1 {
   float: left;
@@ -58,12 +57,10 @@ body {
   margin-top: 50px;
 }
 #personal {
-  height: 50em;
-  background-color: lightyellow;
+  height: 500px;
 }
 #education {
   height: 200px;
-  background-color: lightgrey;
 }
 #skills {
   height: 50em;
@@ -90,20 +87,30 @@ section img {
 #pers1, #pers3 {
   float: left;
   width: 50%;
+  height: 215px;
 }
 #pers2, #pers4 {
   float: right;
   width: 50%;
 }
-.pers p a {
+#pers3, #pers4 {
+  padding-top: 20px;
+}
+section p a {
   text-decoration: none;
 }
-#persLeft {
+.persLeft {
   float: left;
   width: 50%;
 }
-#persRight {
+.persRight {
   float: right;
+}
+.persLeft img {
+  padding-left: 75px;
+}
+.persRight p {
+  padding-right: 75px;
 }
 #eduRight {
   float: right;
