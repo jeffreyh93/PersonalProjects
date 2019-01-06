@@ -2,35 +2,19 @@ body {
   margin:0;
   font-family: 'Alegreya';
   width: 100%;
+  color: #C5C6C7;
+  background-color: #1F2833;
+  font-size: 13pt;
 }
-
-#topNavBar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
+li a {
+  font-size: 15pt;
 }
-#topNavBar h1 a{
-  float: left;
-  margin-left: 10px;
-  color: white;
-  text-decoration: none;
+b {
+  color: #66FCF1;
 }
 #name {
   float: left;
 }
-#topNavBar p a{
-  float: right;
-  display: block;
-  text-align: center;
-  margin-left: 14px;
-  margin-right: 14px;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-}
-
 #about {
   height: 350px;
 }
@@ -57,18 +41,13 @@ body {
   margin-top: 50px;
 }
 #personal {
-  height: 500px;
+  height: 550px;
 }
 #education {
   height: 200px;
 }
-#skills {
-  height: 50em;
-  background-color: lightpink;
-}
 #experience {
-  height: 50em;
-  background-color: lightgreen;
+  height: 200px;
 }
 #eduLeft {
   float: left;
@@ -93,10 +72,13 @@ section img {
   width: 50%;
 }
 #pers3, #pers4 {
-  padding-top: 20px;
+  padding-top: 125px;
 }
 section p a {
   text-decoration: none;
+}
+#pers1, #pers2 {
+  height: 200px;
 }
 .persLeft {
   float: left;
@@ -115,4 +97,65 @@ section p a {
   float: right;
   padding-top: 50px;
   width: 50%
+}
+#contact {
+  padding-top: 25px;
+}
+.button {
+  background-color: #0B0C10;
+  color: #C5C6C7;
+  border: 2px solid #66FCF1;
+  width: 350px;
+  height: 50px;
+  font-size: 15pt;
+  text-align: center;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #45A29E;
+}
+.resume {
+  float: left;
+  text-align: center;
+  width: 50%;
+  padding-bottom: 25px;
+}
+.email {
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 25px;
+}
+#expWrap {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+p b {
+  font-size: 15pt;
+}
+#skills {
+  height: 250px;
+  padding-top: 50px;
+}
+.sk {
+  margin-left: 20px;
+}
+#skillsL {
+  float: left;
+  width: 30%
+}
+#skillsM {
+  float: left;
+  width: 30%
+}
+#skillsR {
+  float: left;
+  width: 30%
+}
+.navbar-brand {
+  font-size: 15pt;
+}
+.persImg {
+  height: 250px;
+  width: auto;
 }

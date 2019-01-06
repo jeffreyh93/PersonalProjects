@@ -3,23 +3,42 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title>Jeffrey Huynh - Website</title>
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
   <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+  <script src="../js/jquery-3.3.1.js"></script>
 </head>
 
 <body>
-  <div id="topNavBar">
-    <p id="name"><a href="">Jeffrey Huynh</a></p>
-    <p><a href="#experience">Professional Work Experience</a></p>
-    <p><a href="#skills">Skills</a></p>
-    <p><a href="#personal">Personal Projects</a></p>
-    <p><a href="#education">Education</a></p>
-    <p><a href="#about">About Me</a></p>
-  </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Jeffrey Huynh</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#personal">Personal Projects</a></li>
+          <li><a href="#experience">Technical Work Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div id="about">
     <div id="aboutLeft">
-      <h1>Jeffrey Huynh</h1>
+      <h1><b>Jeffrey Huynh</b></h1>
       <img src="https://dummyimage.com/300x300/000/fff" />
     </div>
     <div id="aboutRight">
@@ -28,81 +47,113 @@
         recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
   </div>
-  <div id="education">
-    <div id="eduLeft">
-      <section style="float:left;">
-        <p>British Columbia Institute of Technology</p>
-        <ul>
-          <li>Diploma in Computer Systems Technology</li>
-          <li>September 2018 - Present</li>
-          <li>Enrolled in Co-Op Program</li>
-        </ul>
-      </section>
-      <section style="float:right;">
-        <img src="https://dummyimage.com/150x150/000/fff" />
-      </section>
+  <div id="skills">
+    <div class="sk" id="skillsL">
+      <h3><b>Languages</b></h3>
+      <ul>
+        <li>Java</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>BootStrap, Node.js</li>
+        <li>C++, C#</li>
+        <li>VBA</li>
+      </ul>
     </div>
-    <div id="eduRight">
-      <section style="float:left;">
-        <p>University of British Columbia</p>
-        <ul>
-          <li>Bachelor's Degree in Electrical Engineering</li>
-          <li>September 2011 - May 2015</li>
-        </ul>
-      </section>
-      <section style="float:right;">
-        <img src="https://dummyimage.com/150x150/000/fff" />
-      </section>
+    <div class="sk" id="skillsM">
+      <h3><b>Applications</b></h3>
+      <ul>
+        <li>Eclipse</li>
+        <li>Microsoft Visual Studio</li>
+        <li>Microsoft Office</li>
+      </ul>
+    </div>
+    <div class="sk" id="skillsR">
+      <h3><b>Database Systems</b></h3>
+      <ul>
+        <li>Google Firebase</li>
+        <li>MySQL</li>
+      </ul>
     </div>
   </div>
   <div id="personal">
     <div class="pers" id="pers1">
       <section class="persLeft">
-        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Tic_Tac_Toe">Tic-Tac-Toe</a></p>
+        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Tic_Tac_Toe"><b>Tic-Tac-Toe</b></a></p>
         <p>Implemented a simple 'Tic-Tac-Toe' game involving 2 players using JavaFX mouse click events that track where on the screen the user clicks</p>
         <p>Skills Utilized: Java, JavaFX</p>
       </section>
       <section class="persRight">
-        <img src="https://dummyimage.com/175x175/000/fff" />
+        <img class="persImg" src="../img/tictactoe.jpg" />
       </section>
       </ul>
     </div>
     <div class="pers" id="pers2">
       <section class="persLeft">
-        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Minesweeper">Minesweeper</a></p>
+        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Minesweeper"><b>Minesweeper</b></a></p>
         <p>Developed the classic 'Minesweeper' game using JavaFX by implementing a 2D array of buttons and logic involving where mines are located on the grid and checking adjacent buttons in the array for mines</p>
         <p>Skills Utilized: Java, JavaFX</p>
       </section>
       <section class="persRight">
-        <img src="https://dummyimage.com/175x175/000/fff" />
+        <img class="persImg" src="../img/minesweeper.jpg" />
       </section>
     </div>
     <div id="pers3">
-      <section class="persLeft">
-        <img src="https://dummyimage.com/175x175/000/fff" />
-      </section>
       <section class="persRightBot">
-        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Website">Resume Website</a></p>
+        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Website"><b>Resume Website</b></a></p>
         <p>Designed and hosted a functioning website using HTML, CSS, and JavaScript. Made divs to create sections on the webpage to allow for implementation one section at a time.</p>
         <p>Skills Utilized: HTML, CSS, JavaScript, GitHub</p>
       </section>
     </div>
     <div id="pers4">
       <section class="persLeft">
-        <img src="https://dummyimage.com/175x175/000/fff" />
+        <img class="persImg" src="../img/chess.jpg" />
       </section>
       <section class="persRightBot">
-        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Chess">Chess</a></p>
+        <p><a target="_blank" href="https://github.com/jeffreyh93/PersonalProjects/tree/master/Chess"><b>Chess</b></a></p>
         <p>Created a 2 player 'Chess' game that implements a 2D array of buttons with images corresponding to the piece. Clicking on a piece will display the allowable movements that the piece is allowed to make.</p>
         <p>Skills Utilized: Java, JavaFX, CSS</p>
       </section>
     </div>
   </div>
-  <div id="skills">
-
-  </div>
   <div id="experience">
+    <div id="expWrap">
+      <p><b>Gaming Laboratories International, LLC</b></p>
+      <ul>
+        <li>Tested and certified various gambling products including casino machines, lottery and raffle systems, and online gaming platforms</li>
+        <li>Communicated any compliance issues with the product to the client in a succinct and professional manner</li>
+        <li>Created multiple tools through Microsoft Excel and Visual Studio used by engineers to facilitate testing processes while upholding engineering standards</li>
+        <li>Coordinated with the Bahamas Gaming Board to certify multiple gaming platforms against approved regulation standards for that jurisdiction</li>
+      </ul>
+    </div>
+  </div>
+  <div id="education">
+    <div id="eduLeft">
+      <section style="float:left;">
+        <p><b>British Columbia Institute of Technology</b></p>
+        <ul>
+          <li>Diploma in Computer Systems Technology</li>
+          <li>September 2018 - Present</li>
+          <li>Enrolled in Co-Op Program</li>
+        </ul>
+      </section>
+    </div>
+    <div id="eduRight">
+      <section style="float:left;">
+        <p><b>University of British Columbia</b></p>
+        <ul>
+          <li>Bachelor's Degree in Electrical Engineering</li>
+          <li>September 2011 - May 2015</li>
+        </ul>
+      </section>
 
+    </div>
+  </div>
+  <div id="contact">
+    <form class="resume" method="get" action="../img/JeffreyHuynh - Resume.pdf" target="_blank">
+      <button class="button" type="submit">View Resume</button>
+    </form>
+    <form class="email" action="mailto:jhuynh37@my.bcit.com">
+      <input class="button" type="submit" value="Email Me" />
+    </form>
   </div>
 </body>
 
